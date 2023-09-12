@@ -57,7 +57,35 @@ struct ContentView: View {
                     .frame(width: 350, height: 1)
                     .foregroundColor(.white)
                 
+                Button {
                     
+                } label: {
+                    Text("Sign Up")
+                        .bold()
+                        .frame(width: 200, height: 40)
+                        .background(
+                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                .fill(.linearGradient(colors: [.pink, .red], startPoint: .top, endPoint: .bottomTrailing))
+                            )
+                        .foregroundColor(.white)
+                }
+                .padding(.top)
+                .offset(y: 110)
+                
+                
+                
+                Button {
+                    
+                } label: {
+                    Text("Already have an account")
+                        .bold()
+                        .foregroundColor(.white)
+                
+                }
+                .padding(.top)
+                .offset(y: 110)
+                
+
                 
             }
             .frame(width: 350)
