@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1081437863361",
+    "project_id": "mas-android-studio",
+    "storage_bucket": "mas-android-studio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081437863361:android:752a39d5a264322536c340",
+        "android_client_info": {
+          "package_name": "com.example.mas_android_studio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG3C_RetAwVjTd8-bMCuJS21DxijO9zRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
