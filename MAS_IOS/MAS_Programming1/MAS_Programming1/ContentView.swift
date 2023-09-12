@@ -12,7 +12,16 @@ import Firebase
 struct ContentView: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var userIsLoggedIn = false
     var body: some View {
+        if userIsLoggedIn {
+            ListView()
+        } else {
+            content
+        }
+    }
+    
+    var content : some View {
         ZStack {
 //            Image(systemName: "globe")
 //                .imageScale(.large)
@@ -22,7 +31,7 @@ struct ContentView: View {
             
             Color.black
             RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .foregroundStyle(.linearGradient(colors: [.pink, .red] , startPoint: .topLeading, endPoint: .bottomTrailing))
+                .foregroundStyle(.linearGradient(colors: [.yellow, .red] , startPoint: .topLeading, endPoint: .bottomTrailing))
                 .frame(width: 1000, height: 400)
                 .rotationEffect(.degrees(135))
                 .offset(y : -350)
@@ -53,7 +62,6 @@ struct ContentView: View {
                             .bold()
                     }
                                  
-                                 
                 
                 Rectangle()
                     .frame(width: 350, height: 1)
@@ -75,7 +83,6 @@ struct ContentView: View {
                 .offset(y: 110)
                 
                 
-                
                 Button {
                     login()
                 } label: {
@@ -91,10 +98,18 @@ struct ContentView: View {
                 
             }
             .frame(width: 350)
+//            .onAppear {
+//                Auth.auth().addStateDidChangeListener{auth, user in
+//                    if user != nil {
+//                       userIsLoggedIn = true
+//                    }
+                    
+                    
+//                }
+//            }
                    
         }
         .ignoresSafeArea()
-//        .padding()
     }
     
     func login()
@@ -103,6 +118,8 @@ struct ContentView: View {
             result, error in
             if error != nil{
                 print(error!.localizedDescription)
+            } else {
+                userIsLoggedIn = true
             }
         }
     }
