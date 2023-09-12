@@ -31,16 +31,16 @@ struct ContentView: View {
             
             Color.black
             RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .foregroundStyle(.linearGradient(colors: [.yellow, .red] , startPoint: .topLeading, endPoint: .bottomTrailing))
+                .foregroundStyle(.linearGradient(colors: [.purple, .red] , startPoint: .topLeading, endPoint: .bottomTrailing))
                 .frame(width: 1000, height: 400)
-                .rotationEffect(.degrees(135))
+                .rotationEffect(.degrees(15))
                 .offset(y : -350)
             
             VStack(spacing: 20){
-                Text("Welcome")
+                Text("Login for Dogs!")
                     .foregroundColor(.white)
                     .font(.system(size: 40, weight: .bold, design: .rounded))
-                    .offset(x: -100, y:-100)
+                    .offset(x: -10, y:-100)
                 TextField("Email", text: $email)
                     .foregroundColor(.white)
                     .textFieldStyle(.plain)
@@ -75,7 +75,7 @@ struct ContentView: View {
                         .frame(width: 200, height: 40)
                         .background(
                             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .fill(.linearGradient(colors: [.pink, .red], startPoint: .top, endPoint: .bottomTrailing))
+                                .fill(.linearGradient(colors: [.pink, .purple], startPoint: .top, endPoint: .bottomTrailing))
                             )
                         .foregroundColor(.white)
                 }
@@ -86,7 +86,7 @@ struct ContentView: View {
                 Button {
                     login()
                 } label: {
-                    Text("Already have an account")
+                    Text("Already have an account/Login")
                         .bold()
                         .foregroundColor(.white)
                 

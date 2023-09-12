@@ -18,6 +18,8 @@
 		E1613B982AB02A25005FB3B3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E1613B972AB02A25005FB3B3 /* FirebaseFirestore */; };
 		E1613B9A2AB02B18005FB3B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1613B992AB02B18005FB3B3 /* GoogleService-Info.plist */; };
 		E1613B9C2AB09891005FB3B3 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1613B9B2AB09891005FB3B3 /* ListView.swift */; };
+		E1613B9E2AB0E0E9005FB3B3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1613B9D2AB0E0E9005FB3B3 /* Model.swift */; };
+		E1613BA02AB0E38B005FB3B3 /* DogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1613B9F2AB0E38B005FB3B3 /* DogView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		E1598B8E2AB01BA1007E1075 /* MAS_Programming1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAS_Programming1UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E1613B992AB02B18005FB3B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1613B9B2AB09891005FB3B3 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		E1613B9D2AB0E0E9005FB3B3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E1613B9F2AB0E38B005FB3B3 /* DogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				E1598B712AB01B9F007E1075 /* MAS_Programming1App.swift */,
 				E1598B732AB01B9F007E1075 /* ContentView.swift */,
 				E1613B9B2AB09891005FB3B3 /* ListView.swift */,
+				E1613B9F2AB0E38B005FB3B3 /* DogView.swift */,
+				E1613B9D2AB0E0E9005FB3B3 /* Model.swift */,
 				E1613B992AB02B18005FB3B3 /* GoogleService-Info.plist */,
 				E1598B752AB01BA1007E1075 /* Assets.xcassets */,
 				E1598B772AB01BA1007E1075 /* Preview Content */,
@@ -276,8 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1598B742AB01B9F007E1075 /* ContentView.swift in Sources */,
+				E1613BA02AB0E38B005FB3B3 /* DogView.swift in Sources */,
 				E1598B722AB01B9F007E1075 /* MAS_Programming1App.swift in Sources */,
 				E1613B9C2AB09891005FB3B3 /* ListView.swift in Sources */,
+				E1613B9E2AB0E0E9005FB3B3 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

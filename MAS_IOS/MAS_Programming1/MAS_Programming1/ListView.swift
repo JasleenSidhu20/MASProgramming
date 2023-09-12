@@ -7,64 +7,63 @@
 
 import SwiftUI
 
-struct Course: Hashable, Codable{
-    let name: String
-    let image: String
-}
+//struct Course: Hashable, Codable{
+//    let message: String
+//    let status: String
+//}
 
-class ViewModel: ObservableObject {
-    @Published var courses: [Course] = []
-    func fetch() {
-        guard let url = URL(string: "https://iosacademy.io/api/v1/courses/index.php") else {
-            return
-        }
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _,
-            error in
-            guard let data = data, error == nil else {
-                return
-            }
-            do {
-                let courses = try JSONDecoder().decode([Course].self, from: data)
-                DispatchQueue.main.async {
-                    self?.courses = courses
-                }
-            } catch {
-                print(error)
-            }
-            
-        }
-        task.resume()
-    }
-}
+//struct Joke: Codable {
+//    let value: String
+//}
+
 
 struct ListView: View {
-    @StateObject var viewModel = ViewModel()
-    
-//    @StateObject var viewModel = viewModel()
-    var body: some View {
-//        Text("Hello!!!")
-        NavigationView{
-            List {
-                ForEach(viewModel.courses, id :\.self) { course in
-                    HStack {
-                        Image("")
-                            .frame(width: 130, height: 70)
-                            .background(Color.gray)
-                        Text(course.name)
-                            .bold()
+    @State private var dogBreeds: [String] = []
+        
+        @State private var showError = false
+        
+        var body: some View {
+           
+                VStack {
+                    
+                        NavigationView {
+                            List(dogBreeds, id: \.self) { dogBreed in
+                                NavigationLink {
+                                    DogView(dogBreed: dogBreed)
+                                } label: {
+                                    Text(dogBreed.capitalized)
+                                }
+                                
+                            }.navigationTitle("Dog Breeds!")
+                            
+                        }.task {
+                            await getDogBreeds()
+                        }.alert("Error", isPresented: $showError) {
+                            Button("Ok") {
+                                
+                            }
+                        } message: {
+                            Text("There was an error fetching the dogs.  Sorry :(")
+                        }
+                        .foregroundColor(.purple)
+                        .bold()
+                        //            .background(.purple)
                     }
-                    .padding(3)
-                }
                 
-            }
-            .navigationTitle("Courses")
-            .onAppear {
-                viewModel.fetch()
+            
+            
+}
+    
+    func getDogBreeds() async {
+            do {
+                let responseJson: BreedResponse = try await getData(urlString: "https://dog.ceo/api/breeds/list/all")
+                dogBreeds = responseJson.message.keys.map { $0 }.sorted()
+            } catch {
+                print(error)
+                showError = true
             }
         }
     }
-}
-
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
         ListView()
