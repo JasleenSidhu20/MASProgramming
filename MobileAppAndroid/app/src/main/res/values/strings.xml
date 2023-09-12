@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MobileApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="click_to_login">Click to login</string>
+    <string name="click_to_register">Click to Register</string>
+    <string name="logout">Logout</string>
+
+    <!--    <string name="email">email</string>-->
+<!--    <string name="password">password</string>-->
+</resources>
