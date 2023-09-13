@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MAS_Android_Studio</string>
+    <string name="register">register</string>
+    <string name="login">login</string>
+</resources>
