@@ -28,13 +28,19 @@ struct ContentView: View {
 //                .foregroundColor(.accentColor)
 //            Text("Hello, world!")
 //                .padding()
-            
             Color.black
             RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .foregroundStyle(.linearGradient(colors: [.purple, .red] , startPoint: .topLeading, endPoint: .bottomTrailing))
-                .frame(width: 1000, height: 400)
+                .foregroundStyle(.linearGradient(colors: [.pink, .purple] , startPoint: .topLeading, endPoint: .bottomTrailing))
+                .frame(width: 1200, height: 450)
                 .rotationEffect(.degrees(15))
                 .offset(y : -350)
+            
+//            Color.black
+//            RoundedRectangle(cornerRadius: 30, style: .continuous)
+//                .foregroundStyle(.linearGradient(colors: [.purple, .red] , startPoint: .topLeading, endPoint: .bottomTrailing))
+//                .frame(width: 1000, height: 400)
+//                .rotationEffect(.degrees(15))
+//                .offset(y : -350)
             
             VStack(spacing: 20){
                 Text("Login for Dogs!")
